@@ -29,33 +29,28 @@ btnAvancar.addEventListener("click", function() {
     return;
   }
   //passo 4 - buscar o cartão que esta selecionado e esconder
-  
-  esconderCartao();
+  removerCartao();
   
   cartaoAtual++;
   mostrarCartao();
 })
 
-const btnAvancar = document.getElementById("btn-voltar")
+const btnVoltar = document.getElementById("btn-voltar")
 
-const cartoes = document.querySelectorAll(".cartao")
-let cartaoAtual = 0;
-
-btnAvancar.addEventListener("click", function() {
+btnVoltar.addEventListener("click", function() {
   if(cartaoAtual === 0){
     return;
   }
-  
-  esconderCartao();
+  removerCartao()
   
   cartaoAtual--;
-  mostrarCartao();
+  mostrarCartao()
 })
 
-function esconderCartao() {
-  const cartaoSelecionado = document.querySelector("selecionado")
-cartaoSelecionado.classList.remove("selecionado");
+function removerCartao(){
+  const cartaoSelecionado = document.querySelector(".selecionado")
+  cartaoSelecionado.classList.remove("selecionado");
 }
-function mostrarCartao() {
-  cartoes[cartaoAtual].classlist.add("selecionado")
+function mostrarCartao(){
+  cartoes[cartaoAtual].classList.add("selecionado")
 }
