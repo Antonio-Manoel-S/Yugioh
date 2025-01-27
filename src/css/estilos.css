@@ -86,7 +86,11 @@ body {
   max-width: 300px;
   color:#000000;
   background:radial-gradient(circle, #f3e2c8, #e4cfa5, #c4a57a);
-  border:2px solid #a67c52;
+  border:2px solid #a67c52; /*
+  expressura solid cor
+  box-shadow: horizontal vertical blur spread color;
+  caso necessário usar sombra
+ */
   text-align: left;
   line-height: 1.5;
   padding: 5px;
