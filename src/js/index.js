@@ -54,3 +54,15 @@ function removerCartao(){
 function mostrarCartao(){
   cartoes[cartaoAtual].classList.add("selecionado")
 }
+
+cartoes.forEach(cartao => {
+  cartao.addEventListener('click', function(){
+    const cartaVirada = cartao.querySelector(".carta-virada");
+    //o array cartao (criado dentro desse for each) dentro do array cartoes, será verificado atraves do classlist se tem "virar", e o toggle vai tirar se tiver. Se não tiver, vai colocar.
+    cartao.classList.toggle("virar");
+    cartaVirada.classList.toggle("mostrar-fundo-carta");
+    
+    const descricao = cartao.querySelector(".descricao");
+    descricao.classList.toggle("esconder")
+  });
+});

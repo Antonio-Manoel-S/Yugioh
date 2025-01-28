@@ -41,6 +41,7 @@ body {
   border-radius: 10px;
   position: relative; 
   /* no position absolute, na qual posicionou as cartas por cima da outra, deixou a lista (pai) sem posição porque ficou absoluta sem poder mudar, e não é bom deixar assim*/
+  padding: 12px;
 }
 .slider{
   display:flex;
@@ -177,4 +178,30 @@ body::-webkit-scrollbar-track{
 
 ::-webkit-scrollbar-thumb:hover {
     background: #c08057;
+}
+
+.carta-virada{
+  display: none;
+}
+
+.carta-virada.mostrar-fundo-carta{
+  background:url(../imagens/fundo-carta.jpg);
+  display: block;
+  position:absolute; /* saiu de dentro da div que estava contida, nesse caso uma LI.*/
+  width: 100%;
+  height: 100%;
+  background-size:cover;
+  background-position: center;
+  top:0; /* gruda no topo da li */
+  left:0;
+  z-index:2;
+  border-radius: 20px;
+}
+.cartao.virar{
+  transform: rotateZ(90deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+.esconder{
+  display:none;
 }
